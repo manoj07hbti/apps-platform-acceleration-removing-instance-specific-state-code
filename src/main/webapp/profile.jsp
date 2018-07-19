@@ -10,6 +10,7 @@
     <title>Remove Session State Lab - Profile Page</title>
 </head>
 <body>
+Instance number: <%= System.getenv("CF_INSTANCE_INDEX") %>
 
 <h1>Your Profile</h1>
 <div>Username:</div>
@@ -18,6 +19,8 @@
 <div>Phone Number:</div>
 <div><%= session.getAttribute("phoneNumber") %>
 </div>
+
+
 
 <form action="logout" method="post">
     <input type="submit" value="Logout">
